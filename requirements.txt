@@ -1,6 +1,7 @@
-streamlit
-torch
-diffusers
-transformers
-accelerate
-Pillow
+streamlit>=1.32.0
+torch>=2.2.0
+diffusers>=0.34.0
+transformers>=4.40.0
+accelerate>=0.29.0
+safetensors>=0.4.2
+Pillow>=10.2.0
