@@ -8,12 +8,12 @@ from io import BytesIO
 # --- Page Configuration ---
 st.set_page_config(
     page_title="Stable Diffusion UI",
-    page_icon="🚀",
+    page_icon=None,
     layout="wide"
 )
 
 # --- Main Application ---
-st.title("🚀 Stable Diffusion Image Generator")
+st.title("Stable Diffusion Image Generator")
 st.markdown("Enter a text prompt to generate an image using a backend API.")
 
 # --- API URL Input ---
@@ -29,10 +29,10 @@ st.header("Image Prompt")
 prompt = st.text_area(
     "Enter your prompt",
     height=100,
-    placeholder="e.g., A photo of an astronaut riding a horse on Mars"
+    placeholder="e.g., A photo of Minnal Murali standing on a rooftop during a thunderstorm"
 )
 
-generate_button = st.button("Generate Image", type="primary")
+generate_button = st.button("Generate Image")
 
 # --- Image Generation Logic ---
 if generate_button:
@@ -70,9 +70,9 @@ if generate_button:
 # --- Example Prompts ---
 st.sidebar.header("Example Prompts")
 examples = [
-    "A high-quality photo of a delicious ceviche cheesecake slice",
-    "An astronaut riding a green horse on Mars, cinematic lighting, 8k",
-    "A watercolor painting of a panda playing a banjo in a bamboo forest",
+    "Minnal Murali standing heroically with lightning in the background",
+    "A dramatic scene of Minnal Murali running through a village during a storm",
+    "Minnal Murali in his superhero costume, striking a powerful pose in front of a temple",
 ]
 for ex in examples:
     st.sidebar.markdown(f"- `{ex}`")
