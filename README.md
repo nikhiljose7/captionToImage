@@ -15,7 +15,7 @@ This project is a web application that generates images from text prompts using 
 The repository is organized as follows:
 
 * `app.py`: The main Streamlit application file for the frontend user interface.
-* `caption_to_image_Backend.ipynb`: A Jupyter notebook that sets up and runs the FastAPI backend server for image generation.
+* `backend.py`: The FastAPI backend server for image generation.
 * `image_training_caption.ipynb`: A Jupyter notebook detailing the process of fine-tuning the Stable Diffusion model using LoRA.
 * `requirements.txt`: A file listing the Python dependencies for the frontend application.
 
@@ -37,7 +37,10 @@ To get this project up and running on your local machine, follow these steps:
     ```
 
 2.  **Set up the Backend:**
-    * Open and run the `caption_to_image_Backend.ipynb` notebook in a Jupyter environment. This will install all the necessary backend dependencies and start the FastAPI server.
+    * Navigate to the repository directory and run the backend script. This will install all the necessary backend dependencies and start the FastAPI server.
+        ```bash
+        python backend.py
+        ```
     * When the backend is running, it will generate a public ngrok URL. Copy this URL.
 
 3.  **Set up the Frontend:**
@@ -50,7 +53,7 @@ To get this project up and running on your local machine, follow these steps:
         streamlit run app.py
         ```
     * Open your web browser and navigate to the local URL provided by Streamlit.
-    * In the sidebar of the web application, paste the ngrok URL you copied from the backend notebook into the "Enter Backend API URL" field.
+    * In the sidebar of the web application, paste the ngrok URL you copied from the backend into the "Enter Backend API URL" field.
 
 ## Usage
 
@@ -77,7 +80,7 @@ The `image_training_caption.ipynb` notebook provides a step-by-step guide on how
 * requests
 * Pillow
 
-### Backend (`caption_to_image_Backend.ipynb`)
+### Backend (`backend.py`)
 
 * fastapi
 * uvicorn
